@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bunga Cahya</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="judul" id="judul">
+      <h1 class="type" id="kedua">
+        BACA DULU YA SAMPAI SELESAI <br />
+        EVERYTHING ABOUT YOU<br />
+        BUNGA CAHYA 
+      </h1>
+      <button onclick="myFunction()" class="button-primary">
+        KEJUTAN UNTUK KAMU
+      </button>
+    </div>
+
+    <div id="myDIV">
+      <div class="container">
+        <img src="images/1.1.jpg" alt="" />
+        <img src="images/1.2.JPG" alt="" />
+        <img src="images/1.4.JPG" alt="" />
+        <img src="images/1.9.jpg" alt="" />
+        <img src="images/1.6.jpg" alt="" />
+        <img src="images/1.8.jpg" alt="" />
+        <img src="images/1.5.jpg" alt="" />
+      </div>
+      <div class="container">
+        <img src="images/1.10.jpg" id="myFoto" alt="" />
+      </div>
+    </div>
+    <button onclick="myShow()" class="button-secondary" id="btn">BONUS</button>
+
+    <script>
+      var typed = new Typed(".type", {
+        strings: [
+          "Suka Indra Frimawan",
+          "Suka Indra Frimawan",,
+          "Suka Nadin Amizah",
+          "Suka Main Gitar",
+          "Suka Sarapan Nasi Uduk",
+          "Suka Main Twitter",
+          "Suka Semuanya ",
+        ],
+        typeSpeed: 80,
+        backSpeed: 100,
+        loop: true,
+      });
+      var musik = "Bila Kau Tak Disampingku.mp3";
+      var audio = new Audio(musik);
+      audio.loop = true;
+      audio.autoplay = true;
+
+      function myFunction() {
+        audio.play();
+        document.getElementById("myDIV").style.display = "block";
+        document.getElementById("judul").style.display = "none";
+        document.getElementById("btn").style.display = "block";
+      }
+      function myShow() {
+        alert(
+          "MAAF YA BUNGA CUMAN BISA NGASIH INI DOANG, CUMAN MAU MINTA MAAF ATAS KESALAH PAHAMAN KEMARIN, DAN MAU MEMPERBAIKI SEMUANYA  \u2665"
+        );
+        document.getElementById("myFoto").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
